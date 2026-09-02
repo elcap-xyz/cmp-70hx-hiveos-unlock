@@ -15,7 +15,7 @@ The recorded setup used the following exact combination:
 | NVIDIA module type | Open kernel modules |
 | Unlock patch | `0014-cmp70hx-ga104-rejoin14.patch` |
 | Successful-load marker | `PASS_CMP70HX_RUNNING` |
-| Miner used after validation | WildRig |
+| Recorded miners after validation | WildRig, PeakMiner |
 
 Do **not** substitute a newer driver, another NVIDIA branch, a proprietary-module build, or a patch made for a different kernel. The versions above work as one set.
 
@@ -71,7 +71,16 @@ The expected result is:
 - `nvidia-smi` detects `NVIDIA CMP 70HX`;
 - the driver reports version `610.43.03` and the GPU can enter `P0` under load.
 
-Only then start WildRig or another miner you have configured, and confirm stable hashrate, temperatures, power draw, and accepted shares.
+Only then start WildRig, PeakMiner, or another miner you have configured, and confirm stable hashrate, temperatures, power draw, and accepted shares.
+
+## Recorded hashrate and miners
+
+| Miner | Recorded hashrate | Recorded conditions |
+| --- | --- | --- |
+| WildRig | about **43.04 TH/s** | PearlHash, working CMP 70HX profile below |
+| PeakMiner | about **42 TH/s** | Live rig observation: GPU load 100%, about 170 W |
+
+These are recorded results from an unlocked CMP 70HX, not a performance guarantee. Hashrate can change with the algorithm, miner version, clocks, power limit, pool settings, and ambient temperature.
 
 ## Known operating profile
 
